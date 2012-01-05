@@ -23,9 +23,12 @@ var bootstrap = {
       userid = resp.id;
     });
     $('#message').text("Successfully logged in.").addClass('animated fadeIn');
-    a = new A();
-    // Start it motherfuckers
-    Backbone.history.start({pushState: true})
+    if (!a)
+    {
+      a = new A();
+      // Start it motherfuckers
+      Backbone.history.start({pushState: true})
+    }
   },
   notLoggedInYet: function () {
     $('#message').html("Welcome to the " + name +". Please <span id='loginbutton''>login</span> to use. While this application asks for a lot of permissions, I swear it won't be misused. In fact, there are no calls to my server beyond this point, just to Facebook's Graph API. You can find the source code of this application on <a href='https://github.com/nambrot/Facebook-Photo-Browser>Github</a> ").addClass('animated fadeIn');
