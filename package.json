@@ -1,0 +1,8 @@
+{
+    "name": "Facebook-Photo-Browser"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "node-static": ">= 0.0.1"
+  }
+}
