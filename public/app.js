@@ -28,7 +28,7 @@ var bootstrap = {
     Backbone.history.start({pushState: true})
   },
   notLoggedInYet: function () {
-    $('#message').html("Welcome to the " + name +". Please <span id='loginbutton''>login</span> to use. While this application asks for a lot of permissions, I swear it won't be misused. In fact, there are no calls to my server beyond this point, just to Facebook's Graph API. You can find the source code of this application on Github ").addClass('animated fadeIn');
+    $('#message').html("Welcome to the " + name +". Please <span id='loginbutton''>login</span> to use. While this application asks for a lot of permissions, I swear it won't be misused. In fact, there are no calls to my server beyond this point, just to Facebook's Graph API. You can find the source code of this application on <a href='https://github.com/nambrot/Facebook-Photo-Browser>Github</a> ").addClass('animated fadeIn');
     $('#loginbutton').click(_.bind(this.login, this));
   },
   login: function () {
